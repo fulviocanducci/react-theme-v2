@@ -3,11 +3,14 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import IndexProvider from "./context";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <IndexProvider>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </IndexProvider>,
   document.getElementById("root")
 );
 
